@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "rounds": 5,
+    "probeTimeoutMs": 4000,
+    "screenTimeoutMs": 2500,
+    "maxIpPerHost": 3,
+    "finalists": 6,
+    "minOkPercent": 80,
+    "guardBudgetMs": 2500,
+    "guardRetryMs": 300,
+    "reselectCooldownMin": 15,
+    "backupKeep": 20,
+    "allowedStatus": [200, 201, 204, 301, 302, 303, 307, 308, 403, 404]
+  },
+  "groups": [
+    {
+      "name": "github",
+      "probe": "github.com",
+      "pool": [
+        "20.205.243.166", "20.205.243.165",
+        "20.201.28.151", "20.201.28.152",
+        "20.207.73.82", "20.207.73.83",
+        "20.233.83.145", "20.233.83.146",
+        "20.248.137.48", "20.248.137.49", "20.248.137.50",
+        "20.26.156.215", "20.27.177.113", "20.29.134.17", "20.29.134.18",
+        "20.175.192.147", "20.199.39.232", "20.200.245.247", "20.200.245.248",
+        "4.208.26.196", "4.208.26.197", "4.237.22.34", "4.237.22.38",
+        "140.82.112.3", "140.82.112.4", "140.82.113.3", "140.82.113.4",
+        "140.82.114.3", "140.82.114.4", "140.82.121.3", "140.82.121.4"
+      ],
+      "hosts": ["api.github.com", "gist.github.com", "codeload.github.com", "pages.github.com"]
+    },
+    {
+      "name": "poe-wiki",
+      "probe": "poedb.tw",
+      "pool": ["172.66.128.1", "172.66.0.1", "172.66.200.1", "172.66.40.1", "172.66.160.1", "104.18.32.1"],
+      "hosts": ["www.poedb.tw", "poe2db.tw", "www.poe2db.tw", "pathofexile.com", "www.pathofexile.com", "challenges.cloudflare.com"]
+    },
+    {
+      "name": "github-usercontent",
+      "probe": "avatars.githubusercontent.com",
+      "pool": ["185.199.108.133", "185.199.109.133", "185.199.110.133", "185.199.111.133"],
+      "hosts": ["camo.githubusercontent.com", "objects.githubusercontent.com", "user-images.githubusercontent.com", "media.githubusercontent.com"]
+    },
+    {
+      "name": "github-assets",
+      "probe": "github.githubassets.com",
+      "pool": ["185.199.108.215", "185.199.109.215", "185.199.110.215", "185.199.111.215"],
+      "hosts": []
+    }
+  ]
+}

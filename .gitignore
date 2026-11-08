@@ -1,0 +1,11 @@
+# run artifacts (logs and hosts backups live in %LOCALAPPDATA%\AutoHosts, not here)
+*.log
+backups/
+.last-optimize.txt
+
+# editor / OS noise
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*.tmp
